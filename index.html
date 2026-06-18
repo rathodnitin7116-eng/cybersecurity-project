@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ransomware Early Warning System</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        <h2>🛡 REWS</h2>
+        <span>Cyber Security</span>
+    </div>
+
+    <ul>
+        <li class="active">Dashboard</li>
+        <li>Monitoring</li>
+        <li>Threat Intelligence</li>
+        <li>Reports</li>
+        <li>Settings</li>
+    </ul>
+
+</div>
+
+<div class="main-content">
+
+    <header>
+
+        <div>
+            <h1>Ransomware Early Warning System</h1>
+            <p>Real-Time Cyber Threat Monitoring Dashboard</p>
+        </div>
+
+        <button class="primary-btn">
+            Generate Report
+        </button>
+
+    </header>
+
+    <!-- Stats Cards -->
+
+    <section class="stats-grid">
+
+        <div class="card">
+            <h3>Files Scanned</h3>
+            <h2 id="filesScanned">12,453</h2>
+        </div>
+
+        <div class="card">
+            <h3>Threats Detected</h3>
+            <h2 id="threatsDetected">18</h2>
+        </div>
+
+        <div class="card">
+            <h3>Risk Score</h3>
+            <h2 id="riskScore">78%</h2>
+        </div>
+
+        <div class="card">
+            <h3>System Status</h3>
+            <h2 class="status-safe">Protected</h2>
+        </div>
+
+    </section>
+
+    <!-- Charts -->
+
+    <section class="chart-section">
+
+        <div class="chart-card">
+
+            <h3>Threat Trend Analysis</h3>
+
+            <canvas id="threatChart"></canvas>
+
+        </div>
+
+        <div class="chart-card">
+
+            <h3>Threat Severity</h3>
+
+            <canvas id="severityChart"></canvas>
+
+        </div>
+
+    </section>
+
+    <!-- Monitoring -->
+
+    <section class="monitoring-grid">
+
+        <div class="panel">
+
+            <h3>Live Threat Feed</h3>
+
+            <ul id="alertList">
+
+                <li>
+                    🚨 Rapid file encryption detected
+                </li>
+
+                <li>
+                    ⚠ Multiple file extensions modified
+                </li>
+
+                <li>
+                    🚨 Unknown executable launched
+                </li>
+
+            </ul>
+
+            <button onclick="simulateAttack()">
+                Simulate Attack
+            </button>
+
+        </div>
+
+        <div class="panel">
+
+            <h3>Process Monitor</h3>
+
+            <table>
+
+                <tr>
+                    <th>Process</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>chrome.exe</td>
+                    <td class="safe">Safe</td>
+                </tr>
+
+                <tr>
+                    <td>explorer.exe</td>
+                    <td class="safe">Safe</td>
+                </tr>
+
+                <tr>
+                    <td>encryptor.exe</td>
+                    <td class="danger">Critical</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- System Health -->
+
+    <section class="health-section">
+
+        <div class="card">
+            <h3>CPU Usage</h3>
+            <div class="progress">
+                <div class="progress-fill cpu"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>RAM Usage</h3>
+            <div class="progress">
+                <div class="progress-fill ram"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Disk Activity</h3>
+            <div class="progress">
+                <div class="progress-fill disk"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Threat Intelligence -->
+
+    <section class="intel-section">
+
+        <h2>Known Ransomware Families</h2>
+
+        <div class="intel-grid">
+
+            <div class="intel-card">
+                <h3>WannaCry</h3>
+                <p>Mass encryption worm attack.</p>
+            </div>
+
+            <div class="intel-card">
+                <h3>LockBit</h3>
+                <p>Ransomware-as-a-Service family.</p>
+            </div>
+
+            <div class="intel-card">
+                <h3>BlackCat</h3>
+                <p>Advanced extortion ransomware.</p>
+            </div>
+
+            <div class="intel-card">
+                <h3>Ryuk</h3>
+                <p>Targets enterprise systems.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
